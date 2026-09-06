@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" />
+
+    <!-- Título arriba fijo -->
+    <TextView
+        android:id="@+id/tvLeaderTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="🏆 MEJORES PUNTAJES"
+        android:textColor="#00FF41"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="#EE000000"
+        android:padding="10dp"/>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvLeaderTitle"
+        android:background="#00FF41" />
+
+    <!-- Botones abajo fijos -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnResetLeader"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#3A0000"
+            android:fontFamily="monospace"
+            android:text="🗑️ RESETEAR"
+            android:textColor="#FF0000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnBackLeader"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#00FF41"
+            android:fontFamily="monospace"
+            android:text="← VOLVER"
+            android:textColor="#0A0A0A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineAboveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutButtons"
+        android:background="#00FF41" />
+
+    <!-- Tabla entre título y botones -->
+    <LinearLayout
+        android:id="@+id/layoutTable"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDivider"
+        android:layout_above="@id/lineAboveBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:background="#AA1A1A1A"
+        android:padding="16dp">
+
+        <!-- Encabezado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1A3A1A"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="monospace"
+                android:text="POS"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="JUGADOR"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="PUNTAJE"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="RANGO"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Posición 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1A2A1A"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🥇"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvName1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#FFA500"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvScore1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#FFA500"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvRank1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#FFA500"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Posición 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🥈"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvName2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvScore2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvRank2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Posición 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🥉"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvName3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvScore3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvRank3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Posición 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4️⃣"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvName4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvScore4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvRank4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Posición 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5️⃣"
+                android:textSize="18sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvName5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvScore5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvRank5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="monospace"
+                android:text="---"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

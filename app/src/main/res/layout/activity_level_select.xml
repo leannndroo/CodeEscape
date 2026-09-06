@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#55000000" />
+
+    <!-- Título arriba -->
+    <TextView
+        android:id="@+id/tvSelectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="SELECCIONA NIVEL"
+        android:textColor="#00FF41"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="#AA000000"
+        android:padding="8dp"/>
+
+    <!-- Línea decorativa -->
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvSelectTitle"
+        android:layout_marginTop="4dp"
+        android:background="#00FF41" />
+
+    <!-- Zonas de toque invisibles sobre cada puerta -->
+    <LinearLayout
+        android:id="@+id/layoutDoors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@id/lineDivider"
+        android:layout_above="@id/layoutLabels">
+
+        <View
+            android:id="@+id/btnLevel1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <View
+            android:id="@+id/btnLevel2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <View
+            android:id="@+id/btnLevel3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <!-- Etiquetas debajo de cada puerta -->
+    <LinearLayout
+        android:id="@+id/layoutLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnBack"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <!-- Label Puerta 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="NIVEL 1"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvLevel1Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="monospace"
+                android:text="INICIADO 🟢"
+                android:textColor="#00FF41"
+                android:textSize="11sp"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Label Puerta 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvLevel2Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="NIVEL 2"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvLevel2Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="monospace"
+                android:text="GUERRERO ⚔️ 🔒"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Label Puerta 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvLevel3Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="NIVEL 3"
+                android:textColor="#555555"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+            <TextView
+                android:id="@+id/tvLevel3Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="monospace"
+                android:text="DEMENCIAL 💀 🔒"
+                android:textColor="#FF0000"
+                android:textSize="11sp"
+                android:background="#CC000000"
+                android:padding="4dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Botón volver -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#AA1A1A1A"
+        android:fontFamily="monospace"
+        android:text="← VOLVER"
+        android:textColor="#00FF41"
+        android:textSize="12sp" />
+
+    <!-- Botón volumen -->
+    <Button
+        android:id="@+id/btnVolume"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#AA1A1A1A"
+        android:text="🔊"
+        android:textSize="16sp"
+        android:padding="0dp" />
+
+</RelativeLayout>

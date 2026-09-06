@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Fondo del Nivel 1
+    Degradado oscuro tipo cuarto de hacker
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Capa base oscura -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="#0A0A0A"
+                android:centerColor="#0D1A0D"
+                android:endColor="#000D00"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- Borde verde sutil -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#1A3A1A" />
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+
+</layer-list>

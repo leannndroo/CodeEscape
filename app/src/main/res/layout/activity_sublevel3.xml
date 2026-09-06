@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nivel1">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" />
+
+    <!-- Barra superior -->
+    <LinearLayout
+        android:id="@+id/layoutTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="#AA000000"
+        android:padding="6dp">
+
+        <TextView
+            android:id="@+id/tvVidas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="❤️❤️❤️"
+            android:textSize="16sp"
+            android:gravity="start"/>
+
+        <TextView
+            android:id="@+id/tvPuntos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="⭐ 0 pts"
+            android:textColor="#FFA500"
+            android:textSize="12sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:text="⏱️ 00:00"
+            android:textColor="#00FF41"
+            android:textSize="12sp"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <!-- Lado izquierdo -->
+    <LinearLayout
+        android:id="@+id/layoutLeft3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/layoutRight3"
+        android:layout_below="@id/layoutTopBar"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvSublevel3Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="ACERTIJO NIVEL 3"
+            android:textColor="#00FF41"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="#00FF41" />
+
+        <TextView
+            android:id="@+id/tvSublevel3Desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="Descripción"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvSublevel3Question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="¿Cuál es la respuesta?"
+            android:textColor="#00FF41"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvHint3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text="💡 Pista: ..."
+            android:textColor="#555555"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvPistaExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#1A3A1A"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text=""
+            android:textColor="#00FF41"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- Lado derecho -->
+    <LinearLayout
+        android:id="@+id/layoutRight3"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/layoutTopBar"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etAnswer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:hint="escribe tu respuesta..."
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#00FF41"
+            android:textColorHint="#333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvFeedback3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:text=""
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnCheck3"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00FF41"
+            android:fontFamily="monospace"
+            android:text="VERIFICAR"
+            android:textColor="#0A0A0A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPistaExtra"
+            android:layout_width="160dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#3A2A00"
+            android:fontFamily="monospace"
+            android:text="💡 PISTA (-25pts)"
+            android:textColor="#FFA500"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnBackSub3"
+            android:layout_width="160dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:text="← VOLVER"
+            android:textColor="#00FF41"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnVolume"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:text="🔊"
+            android:textSize="16sp"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

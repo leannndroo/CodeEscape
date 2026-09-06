@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" />
+
+    <!-- Título arriba fijo -->
+    <TextView
+        android:id="@+id/tvCreditsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="👨‍💻 CRÉDITOS"
+        android:textColor="#00FF41"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="#EE000000"
+        android:padding="10dp"/>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvCreditsTitle"
+        android:background="#00FF41" />
+
+    <!-- Botón volver abajo fijo -->
+    <Button
+        android:id="@+id/btnBackCredits"
+        android:layout_width="160dp"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#00FF41"
+        android:fontFamily="monospace"
+        android:text="← VOLVER"
+        android:textColor="#0A0A0A"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/lineAboveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/btnBackCredits"
+        android:background="#00FF41" />
+
+    <!-- Contenido -->
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDivider"
+        android:layout_above="@id/lineAboveBtn"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="16dp">
+
+        <!-- Columna izquierda -->
+        <!-- Columna izquierda -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#AA1A1A1A"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="🎮"
+                android:textSize="40sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="CODE ESCAPE"
+                android:textColor="#00FF41"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="v1.0.0 | 2026"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:layout_marginBottom="10dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#00FF41"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Desarrollado con"
+                android:textColor="#555555"
+                android:textSize="11sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Android Studio + Kotlin"
+                android:textColor="#00FF41"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <!-- Columna derecha -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#AA1A1A1A"
+            android:padding="12dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="EQUIPO:"
+                android:textColor="#00FF41"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Fila 1: Desarrollador y Materia -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <!-- Desarrollador -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="👨‍💻 Desarrollador:"
+                        android:textColor="#00FF41"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDeveloper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="Leandro Castelblanco&#10;Miguel Garzón&#10;Brayan Bernal"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+                <!-- Materia -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="📚 Materia:"
+                        android:textColor="#00FF41"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSubject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="PROGRAMACIÓN&#10;MÓVIL"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Fila 2: Institución y Año -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="8dp">
+
+                <!-- Institución -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="🏫 Institución:"
+                        android:textColor="#00FF41"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvInstitution"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="TEINCO"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+                <!-- Año -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="📅 Año:"
+                        android:textColor="#00FF41"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="2026"
+                        android:textColor="#AAAAAA"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#00FF41"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="TECNOLOGÍAS:"
+                android:textColor="#00FF41"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="• Kotlin, Android Studio, XML&#10;• SharedPreferences, Media"
+                android:textColor="#AAAAAA"
+                android:textSize="8sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

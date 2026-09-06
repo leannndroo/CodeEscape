@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <!-- Trofeo -->
+    <TextView
+        android:id="@+id/tvTrophy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="🏆"
+        android:textSize="52sp" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvVictoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTrophy"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="¡FELICITACIONES!"
+        android:textColor="#00FF41"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/tvVictorySubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvVictoryTitle"
+        android:layout_marginTop="2dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Has completado CODE ESCAPE"
+        android:textColor="#00AA2A"
+        android:textSize="13sp" />
+
+    <!-- Botones (anclados abajo) -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPlayAgain"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#1A3A1A"
+            android:fontFamily="monospace"
+            android:text="🔄 JUGAR DE NUEVO"
+            android:textColor="#00FF41"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#00FF41"
+            android:fontFamily="monospace"
+            android:text="SALIR"
+            android:textColor="#0A0A0A"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Línea sobre botones -->
+    <View
+        android:id="@+id/lineAboveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutButtons"
+        android:background="#00FF41" />
+
+    <!-- Mensaje final -->
+    <TextView
+        android:id="@+id/tvFinalMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lineAboveBtn"
+        android:layout_marginBottom="6dp"
+        android:layout_marginHorizontal="12dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="> Eres un verdadero Code Escape Master\n> Sigue programando y nunca pares"
+        android:textColor="#00FF41"
+        android:textSize="11sp"
+        android:background="#1A1A1A"
+        android:padding="6dp"/>
+
+    <!-- 3 columnas de logros -->
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/tvVictorySubtitle"
+        android:layout_above="@id/tvFinalMessage"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- PYTHON -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#1A3A1A"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="🐍 PYTHON"
+                android:textColor="#00FF41"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="✅ print() dominado\n✅ Variables creadas\n✅ if/for aprendido\n✅ Funciones y clases\n✅ Listas y módulos\n✅ Lambda y comprehension"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:lineSpacingExtra="3dp"/>
+
+        </LinearLayout>
+
+        <!-- JAVA -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#2B2200"
+            android:padding="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="☕ JAVA"
+                android:textColor="#FFE03E"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="✅ println() dominado\n✅ Variables tipadas\n✅ if/for aprendido\n✅ Clases y objetos\n✅ Herencia y OOP\n✅ ArrayList dominado"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:lineSpacingExtra="3dp"/>
+
+        </LinearLayout>
+
+        <!-- KOTLIN -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="#1A1A3A"
+            android:padding="10dp"
+            android:layout_marginStart="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="🤖 KOTLIN"
+                android:textColor="#CC3EFF"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="✅ println() dominado\n✅ Variables val/var\n✅ if/for/when\n✅ Clases y data class\n✅ Herencia y lambdas\n✅ Corrutinas y Flow"
+                android:textColor="#AAAAAA"
+                android:textSize="10sp"
+                android:lineSpacingExtra="3dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

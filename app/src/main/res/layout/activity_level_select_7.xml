@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080D08">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22000000" />
+
+    <!-- TÍTULO — vacío, lo pone cada Activity en onCreate -->
+    <TextView
+        android:id="@+id/tvLevelSelectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#00FF41"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:background="#EE000000"
+        android:padding="8dp"
+        android:letterSpacing="0.1"/>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvLevelSelectTitle"
+        android:background="#00FF41" />
+
+    <!-- BOTONES ABAJO -->
+    <LinearLayout
+        android:id="@+id/layoutBottomBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="6dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="130dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:text="← VOLVER"
+            android:textColor="#00FF41"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnVolume"
+            android:layout_width="48dp"
+            android:layout_height="38dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:text="🔊"
+            android:textSize="14sp"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineAboveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/layoutBottomBtns"
+        android:background="#00FF41" />
+
+    <!-- Indicador de scroll -->
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layoutBottomBtns"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#00FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+        <View android:layout_width="6dp" android:layout_height="6dp"
+            android:background="#33FF41" android:layout_margin="3dp"/>
+
+    </LinearLayout>
+
+    <!-- ÁREA CENTRAL -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/lineDivider"
+        android:layout_above="@id/layoutDots">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollDoors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:clipToPadding="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- PUERTA 1 — Verde -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_green">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_green" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#00FF41" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel1Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="gone"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel1Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 1" android:textColor="#00FF41" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel1Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="✅"
+                            android:textColor="#00FF41" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 2 — Verde claro -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel2"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_green2">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_green2" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#5AFFAB" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel2Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel2Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 2" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel2Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 3 — Lima -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel3"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_lime">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_lime" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#A8FF3E" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel3Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel3Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 3" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel3Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 4 — Amarillo -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel4"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_yellow">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_yellow" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#FFE03E" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel4Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel4Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 4" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel4Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 5 — Naranja -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel5"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_orange">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_orange" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#FF9C3E" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel5Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel5Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 5" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel5Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 6 — Rojo -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel6"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_red">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_red" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#FF5E3E" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel6Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel6Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 6" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel6Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- PUERTA 7 — Morado -->
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLevel7"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="@drawable/door_border_purple">
+
+                        <View android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:background="@drawable/door_panel_purple" android:layout_margin="7dp"/>
+                        <View android:layout_width="9dp" android:layout_height="9dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="14dp" android:background="#FFFFFFFF" android:elevation="2dp"/>
+                        <View android:layout_width="7dp" android:layout_height="7dp"
+                            android:layout_centerVertical="true" android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="15dp" android:background="#CC3EFF" android:elevation="3dp"/>
+                        <TextView android:id="@+id/tvLevel7Lock" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:layout_centerInParent="true"
+                            android:text="🔒" android:textSize="20sp" android:visibility="visible"/>
+                    </RelativeLayout>
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="vertical" android:gravity="center"
+                        android:background="#EE000000" android:paddingTop="5dp" android:paddingBottom="5dp">
+                        <TextView android:id="@+id/tvLevel7Name" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:fontFamily="monospace"
+                            android:text="NIVEL 7" android:textColor="#666666" android:textSize="9sp" android:textStyle="bold"/>
+                        <TextView android:id="@+id/tvLevel7Status" android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="🔒"
+                            android:textColor="#555555" android:fontFamily="monospace" android:textSize="8sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

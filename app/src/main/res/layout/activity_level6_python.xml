@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/nivel1">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <TextView
+        android:id="@+id/tvPyLevel6Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="monospace"
+        android:text="🐍 PYTHON — NIVEL 6"
+        android:textColor="#00FF41"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:background="#AA000000"
+        android:padding="6dp"/>
+
+    <TextView
+        android:id="@+id/tvPyProgress6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:text="PROGRESO: [ ] [ ] [ ]"
+        android:textColor="#00FF41"
+        android:textSize="12sp"
+        android:background="#AA000000"
+        android:padding="6dp"/>
+
+    <TextView
+        android:id="@+id/tvPyStatus6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPyLevel6Title"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="Importando módulos del sistema..."
+        android:textColor="#00AA2A"
+        android:textSize="11sp"
+        android:background="#AA000000"
+        android:padding="4dp"/>
+
+    <!-- BOTON 1 -->
+    <LinearLayout
+        android:id="@+id/layoutBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPyImport"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#AA1A1A3A"
+            android:fontFamily="monospace"
+            android:text="📦 IMPORT"
+            android:textColor="#00FF41"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvImportStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:text="LIBRERIA"
+            android:textColor="#00FF41"
+            android:textSize="10sp"
+            android:background="#AA000000"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <!-- PUERTA centro -->
+    <LinearLayout
+        android:id="@+id/layoutPyDoor6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPyDoor6"
+            android:layout_width="90dp"
+            android:layout_height="130dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:text="🚪&#10;ACCESO"
+            android:textColor="#555555"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvPyDoorStatus6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:text="BLOQUEADA"
+            android:textColor="#FF0000"
+            android:textSize="10sp"
+            android:background="#AA000000"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <!-- BOTON 2 -->
+    <LinearLayout
+        android:id="@+id/layoutBtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnPyFrom"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:backgroundTint="#AA3A1A3A"
+            android:fontFamily="monospace"
+            android:text="📂 FROM"
+            android:textColor="#00FF41"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvFromStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="monospace"
+            android:text="MODULO"
+            android:textColor="#00FF41"
+            android:textSize="10sp"
+            android:background="#AA000000"
+            android:padding="3dp"/>
+
+    </LinearLayout>
+
+    <!-- Botón volver -->
+    <Button
+        android:id="@+id/btnBackPy6"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="#AA1A1A1A"
+        android:fontFamily="monospace"
+        android:text="← VOLVER"
+        android:textColor="#00FF41"
+        android:textSize="12sp" />
+
+    <!-- Botón volumen -->
+    <Button
+        android:id="@+id/btnVolume"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#AA1A1A1A"
+        android:text="🔊"
+        android:textSize="16sp"
+        android:padding="0dp" />
+
+</RelativeLayout>

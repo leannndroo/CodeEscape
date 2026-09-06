@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_3puertas">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BB000000" />
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/tvWorldTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="ELIGE TU LENGUAJE"
+        android:textColor="#00FF41"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="#CC000000"
+        android:padding="12dp"
+        android:letterSpacing="0.2"/>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/tvWorldTitle"
+        android:background="#00FF41" />
+
+    <!-- BOTONES ABAJO -->
+    <LinearLayout
+        android:id="@+id/layoutBottomBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:fontFamily="monospace"
+            android:text="← VOLVER"
+            android:textColor="#00FF41"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnVolume"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:backgroundTint="#AA1A1A1A"
+            android:text="🔊"
+            android:textSize="16sp"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineAboveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@id/layoutBottomBtns"
+        android:background="#00FF41" />
+
+    <!-- CONTENEDOR CENTRAL — centrado verticalmente -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDivider"
+        android:layout_above="@id/lineAboveBtn"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <!-- ===== PYTHON ===== -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/btnPython"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:backgroundTint="#1A3A1A"
+                android:fontFamily="monospace"
+                android:text="🐍&#10;&#10;PYTHON"
+                android:textColor="#00FF41"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#CC000000"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="NIVEL 1"
+                    android:textColor="#00FF41"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="PRINCIPIANTE"
+                    android:textColor="#00FF41"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    android:id="@+id/tvPythonStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="⭐ MÁS FÁCIL"
+                    android:textColor="#FFA500"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== JAVA ===== -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/btnJava"
+                android:layout_width="match_parent"
+                android:layout_height="124dp"
+                android:backgroundTint="#3A2A00"
+                android:fontFamily="monospace"
+                android:text="☕&#10;&#10;JAVA"
+                android:textColor="#FFE03E"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#CC000000"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="NIVEL 2"
+                    android:textColor="#FFE03E"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="INTERMEDIO"
+                    android:textColor="#FFE03E"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    android:id="@+id/tvJavaStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="⭐⭐ INTERMEDIO"
+                    android:textColor="#FFA500"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== KOTLIN ===== -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/btnKotlin"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:backgroundTint="#1A1A3A"
+                android:fontFamily="monospace"
+                android:text="🤖&#10;&#10;KOTLIN"
+                android:textColor="#CC3EFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:stateListAnimator="@null"
+                android:elevation="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#CC000000"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="NIVEL 3"
+                    android:textColor="#CC3EFF"
+                    android:textSize="11sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="AVANZADO"
+                    android:textColor="#CC3EFF"
+                    android:textSize="9sp"/>
+
+                <TextView
+                    android:id="@+id/tvKotlinStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="⭐⭐⭐ MÁS DIFÍCIL"
+                    android:textColor="#FFA500"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

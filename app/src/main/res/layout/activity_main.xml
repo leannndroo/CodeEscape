@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000" />
+
+    <!-- Título izquierda -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="48dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#00FF41"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.2" />
+
+    <!-- Tagline -->
+    <TextView
+        android:id="@+id/tvTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_alignStart="@id/tvTitle"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text=""
+        android:textColor="#00AA2A"
+        android:textSize="13sp" />
+
+    <!-- Contenedor derecha: EMPEZAR + CÓMO JUGAR -->
+    <LinearLayout
+        android:id="@+id/layoutRightBtns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="48dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Botón EMPEZAR -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00FF41"
+            android:fontFamily="monospace"
+            android:text="EMPEZAR"
+            android:textColor="#0A0A0A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:alpha="0.4" />
+
+        <!-- Botón CÓMO JUGAR debajo -->
+        <Button
+            android:id="@+id/btnTutorial"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#1A1A1A"
+            android:fontFamily="monospace"
+            android:text="❓ CÓMO JUGAR"
+            android:textColor="#00FF41"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!-- Botón OPCIONES arriba derecha -->
+    <Button
+        android:id="@+id/btnOptions"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#1A1A1A"
+        android:fontFamily="monospace"
+        android:text="⚙️ OPCIONES"
+        android:textColor="#00FF41"
+        android:textSize="12sp" />
+
+    <!-- Texto cargando abajo -->
+    <TextView
+        android:id="@+id/tvTerminal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Cargando juego..."
+        android:textColor="#00AA2A"
+        android:textSize="12sp" />
+
+    <!-- Línea verde inferior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:background="#00FF41" />
+
+</RelativeLayout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CC000000" />
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvStatsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="📊 ESTADÍSTICAS"
+        android:textColor="#00FF41"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="#AA000000"
+        android:padding="8dp"/>
+
+    <View
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvStatsTitle"
+        android:layout_marginTop="4dp"
+        android:background="#00FF41" />
+
+    <!-- Contenido en 2 columnas -->
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineDivider"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="16dp">
+
+        <!-- Columna izquierda — estadísticas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#AA1A1A1A"
+            android:padding="16dp"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="RESUMEN:"
+                android:textColor="#00FF41"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvRango"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="🏆 RANGO: PRINCIPIANTE"
+                android:textColor="#FFA500"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvPuntosStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="⭐ Puntos: 0"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvMejorPuntaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="🥇 Mejor puntaje: 0"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvCorrectas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="✅ Correctas: 0"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvIncorrectas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="❌ Incorrectas: 0"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvNiveles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="🎮 Niveles: 0/9"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvPistas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="💡 Pistas usadas: 0"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!-- Columna derecha — progreso por mundo -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="#AA1A1A1A"
+            android:padding="16dp"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="PROGRESO:"
+                android:textColor="#00FF41"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Python -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="🐍 PYTHON"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvPythonProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="[ ] [ ] [ ]"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Java -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="☕ JAVA"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvJavaProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="[ ][ ][ ][ ][ ][ ][ ]"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Kotlin -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="☕ KOTLIN"
+                android:textColor="#00FF41"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvKotlinProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="[ ] [ ] [ ]"
+                android:textColor="#AAAAAA"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Botones -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnVerAprendido"
+            android:layout_width="180dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#1A3A1A"
+            android:fontFamily="monospace"
+            android:text="📚 QUÉ APRENDISTE"
+            android:textColor="#00FF41"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnBackStats"
+            android:layout_width="140dp"
+            android:layout_height="44dp"
+            android:backgroundTint="#00FF41"
+            android:fontFamily="monospace"
+            android:text="← VOLVER"
+            android:textColor="#0A0A0A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
